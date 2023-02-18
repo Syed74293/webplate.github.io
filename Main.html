@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Main.css">
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Webplate</title>
+</head>
+
+<body onload="loaded()">
+
+    <!-- Navigation -->
+    <nav id="navigation">
+
+        <!-- Left Corner -->
+        <div class="corner">
+            <a href="/Main.html">
+                <h2>Webplate</h2>
+                <small>( By Al Syed Developers )</small>
+            </a>
+        </div>
+
+        <!-- Main Navigation Bar -->
+        <div class="nav">
+            <ul>
+                <li><a href="/Main.html">Home</a></li>
+                <li class="drop-down">
+                    <a href="/all">Templates <span class="material-symbols-rounded">expand_more</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="/">All Templates</a></li>
+                        <li><a href="/">Business</a></li>
+                        <li><a href="/">Blogging</a></li>
+                    </ul>
+                </li>
+                <li><a href="/a">Template Names</a></li>
+                <li><a href="/a">Freebies</a></li>
+                <li><a class="hidenav" onclick="hide_nav()" style="display: none;">Hide Nav <span
+                            class="material-symbols-rounded">visibility_off</span></a></li>
+            </ul>
+        </div>
+
+        <!-- Main Hamburger Navigation -->
+        
+        <ul id="bar">
+            <li>
+                <a href="">Home</a>
+                <span class="close" onclick="menu()"><span class="material-symbols-rounded">close</span></span>
+            </li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
+            <li class="hoverable">
+                <a href="#">
+                    Services
+                    <span class="material-symbols-rounded" id="check">arrow_right</span>
+                </a>
+                <div class="services">
+                    <a href="">Service 1</a>
+                    <a href="">Service 2</a>
+                    <a href="">Service 3</a>
+                    <a href="">Service 4</a>
+                </div>
+            </li>
+        </ul>
+
+        <!-- Right Corner Search Bar -->
+        <div class="search">
+            <form action="javascript:search()">
+                <input type="search" name="filter" id="filter" placeholder="Template Name">
+                <button class="btn"><span class="material-symbols-rounded">search</span></button>
+            </form>
+        </div>
+        
+            <div class="ham-btn"><span class="material-symbols-rounded" onclick="menu()">menu</span></div>
+        
+    </nav>
+
+    <!-- Header -->
+    <header id="head">
+        <div class="slideshow">
+            <div class="sContent">
+                <h1>Webplate</h1>
+                <p>
+                    Webplate offers a vast selection of top-quality website templates at affordable prices. From free
+                    options to premium choices, we've got you covered. Our mission is to provide you with the most
+                    up-to-date and relevant templates to meet all your website needs. Explore our diverse collection and
+                    find the perfect template for your next project. We value your feedback, so don't hesitate to get in
+                    touch with us. Thank you for choosing Webplate, we look forward to serving you again in the future.
+                </p>
+                <p>
+                    For Better Performance and Experience Visit Our Website Using PC
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Loading -->
+    <section id="load">
+        <div class="loader l1"></div>
+        <div class="loader l2"></div>
+        <div class="loader l3"></div>
+    </section>
+
+    <!-- Toasts -->
+    <section class="toasts">
+        <div class="toast">
+            <span class="material-symbols-rounded">warning</span>
+            <h5>Please Try Searching a Different <a href="">Keyword</a></h5>
+            <button class="btn" onclick="cancel(0)"><span class="material-symbols-rounded">cancel</span></button>
+        </div>
+        <div class="toast">
+            <h5>More Templates are Coming Soon Try Other Sections</h5>
+            <button class="btn" onclick="cancel(1)"><span class="material-symbols-rounded">cancel</span></button>
+        </div>
+    </section>
+
+    <!-- Most Popular -->
+    <section id="mp" class="templatepad">
+        <div class="detail">
+            <h3>Most Popular Website Templates</h3>
+            <button onclick="more(0)"> <!-- more will pass a number of link to follow in js -->
+                Show More
+                <span class="material-symbols-rounded">arrow_forward</span>
+            </button>
+        </div>
+        <div class="showcase">
+
+            <!-- Template-1 -->
+            <div class="containers">
+                <img src="./Files/Webshots/Webshot1.png" alt="">
+                <div class="temdetail">
+                    <h3>Lavender</h3>
+                    <h4>Price: $10.00</h4>
+                </div>
+                <div class="buttons">
+                    <a href="details_link" class="show">Details</a>
+                    <a href="./Template Pages/template_name.html" class="demo">Demo</a>
+                </div>
+            </div>
+
+            <!-- Template-2 -->
+            <div class="containers">
+                <img src="./Files/Webshots/Webshot2.png" alt="">
+                <div class="temdetail">
+                    <h3>Template_Name</h3>
+                    <h4>Price: $10.00</h4>
+                </div>
+                <div class="buttons">
+                    <a href="details_link" class="show">Details</a>
+                    <a href="demo_link" class="demo">Demo</a>
+                </div>
+            </div>
+
+            <!-- Template-3 -->
+            <div class="containers">
+                <img src="./Files/tem1.png" alt="">
+                <div class="temdetail">
+                    <h3>Template_Name</h3>
+                    <h4>Price: $10.00</h4>
+                </div>
+                <div class="buttons">
+                    <a href="details_link" class="show">Details</a>
+                    <a href="demo_link" class="demo">Demo</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Recent -->
+    <section class="templatepad">
+        <div class="detail">
+            <h3>Recently Added Website Templates</h3>
+            <button onclick="more(1)"> <!-- more will pass a number of link to follow in js -->
+                Show More
+                <span class="material-symbols-rounded">arrow_forward</span>
+            </button>
+        </div>
+        <div class="showcase">
+
+            <!-- Template-1 -->
+            <div class="containers">
+                <img src="./Files/tem1.png" alt="">
+                <div class="temdetail">
+                    <h3>Template_Name</h3>
+                    <h4>Price: $10.00</h4>
+                </div>
+                <div class="buttons">
+                    <a href="details_link" class="show">Details</a>
+                    <a href="demo_link" class="demo">Demo</a>
+                </div>
+            </div>
+
+            <!-- Template-2 -->
+            <div class="containers">
+                <img src="./Files/tem1.png" alt="">
+                <div class="temdetail">
+                    <h3>Template_Name</h3>
+                    <h4>Price: $10.00</h4>
+                </div>
+                <div class="buttons">
+                    <a href="details_link" class="show">Details</a>
+                    <a href="demo_link" class="demo">Demo</a>
+                </div>
+            </div>
+
+            <!-- Template-3 -->
+            <div class="containers">
+                <img src="./Files/tem1.png" alt="">
+                <div class="temdetail">
+                    <h3>Template_Name</h3>
+                    <h4>Price: $10.00</h4>
+                </div>
+                <div class="buttons">
+                    <a href="details_link" class="show">Details</a>
+                    <a href="demo_link" class="demo">Demo</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="ptands">
+        <div class="plancer">
+            <div>
+                <h2>Premium Templates & Services</h2>
+                <p>
+                    Welcome to the Premium Templates & Services section of Webplate! Our aim is to provide you with the
+                    best
+                    website templates that cater to your needs and budget. Whether you're looking for a free template or
+                    a
+                    premium option, we've got you covered. Our collection features a vast selection of top-quality
+                    templates
+                    that are updated regularly to stay ahead of the curve. We believe in giving you the freedom to
+                    choose
+                    the right template for your project, and that's why we offer a diverse range of options to choose
+                    from.
+                    Our mission is to simplify the website building process for you, and we value your feedback to make
+                    sure
+                    we're always on the right track. So, feel free to get in touch with us and share your thoughts. We
+                    appreciate your trust in Webplate and look forward to serving you again in the future.
+                </p>
+            </div>
+            <div>
+                <a href="https://bit.ly/webplate">
+                    <img src="./Files/mockup.png" alt="Perfectlancer">
+                    <span class="btn">Explore our services now</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="fsecs">
+            <div>
+                <div class="prefsecs">
+                    <h3>Templates</h3>
+                    <ul>
+                        <li><a href="">All Templates</a></li>
+                        <li><a href="">Business Templates</a></li>
+                        <li><a href="">Blogging Templates</a></li>
+                    </ul>
+                </div>
+                <div class="prefsecs">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="">License Information</a></li>
+                        <li><a href="">Contact us</a></li>
+                        <li><a href="">Keywords</a></li>
+                    </ul>
+                </div>
+                <div class="prefsecs">
+                    <h3>About us</h3>
+                    <p>
+                        Webplate offers a variety of customizable website templates for various industries, providing a
+                        user-friendly and cost-effective solution for building a professional online presence.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="fsecs">
+            <div class="social">
+                <a href="">
+                    <img src="./Files/social1.ico" alt="">
+                </a>
+                <a href="">
+                    <img src="./Files/social3.ico" alt="">
+                </a>
+                <a href="">
+                    <img src="./Files/social4.ico" alt="">
+                </a>
+            </div>
+            <h4>&copy; 2023 Webplate | All Rigths Reserved</h4>
+            <h5>Version 1.0.0</h5>
+        </div>
+    </footer>
+
+    <!-- function send_handle(){
+
+  let num=document.getElementById("number").value;
+
+  let msg= document.getElementById("msg").value;
+
+    let name= document.getElementById("name").value;
+  
+  var win = window.open(`https://wa.me/${num}?text=I%27m%20api%20msg%20hello%20${name}%20friend%20${msg}`, '_blank');
+ // win.focus();
+} -->
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="./Main.js"></script>
+
+</body>
+
+</html>

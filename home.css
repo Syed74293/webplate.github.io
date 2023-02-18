@@ -1,0 +1,362 @@
+/* Header */
+#head {
+    height: 100vh;
+    box-shadow: 0px 1px 11px black;
+}
+
+/* Background Image Overlayed on Head */
+.slideshow::before {
+    content: "";
+    background: url('./Files/img6.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+/* To Make Background Stay At Its Right Possition */
+.slideshow {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.sContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width: 100%;
+    margin-top: -30px;
+    position: relative;
+    background-color: #111111ca;
+}
+
+.sContent h1 {
+    color: #c5c5c5;
+    z-index: 1;
+    padding: 7px 3px;
+    font-family: 'Sofia Sans', sans-serif;
+    letter-spacing: -1px;
+}
+
+.sContent p {
+    color: #c5c5c5;
+    z-index: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 70%;
+    padding: 5px 3px;
+    font-family: 'Itim', cursive;
+}
+
+.sContent>p:last-child {
+    display: none;
+}
+
+/* Templates */
+.templatepad {
+    padding: 34px;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 3px;
+}
+
+/* Text Opposite to Show More */
+.detail h3 {
+    color: var(--grey);
+    font-family: 'itim', cursive;
+}
+
+/* Show More Button */
+.detail button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--pink);
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    font-family: 'itim', cursive;
+}
+
+.detail button span {
+    transition: all 0.2s linear;
+    position: relative;
+    left: 0px;
+}
+
+.detail button:hover span {
+    left: 3px;
+}
+
+/* Content inside Templates Section */
+.showcase {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Three Containers inside Show Case */
+.containers {
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s linear;
+    border-radius: 3px;
+    margin: 3px 11px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.containers img {
+    width: 100%;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    box-shadow: 0px 0px 7px black;
+}
+
+/* Template Name and Price + Buttons */
+.temdetail {
+    display: flex;
+    flex-direction: column;
+    padding: 7px 11px;
+    line-height: 2.5rem;
+}
+
+.temdetail h3 {
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+.temdetail h4 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+/* Detail and Demo Buttons */
+.buttons {
+    display: flex;
+    margin: 5px;
+}
+
+.show,
+.demo {
+    padding: 11px;
+    margin: 3px;
+    border-radius: 3px;
+    transition: all 0.2s linear;
+    width: 50%;
+    font-size: 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'itim', cursive;
+}
+
+.show {
+    background-color: transparent;
+    box-shadow: 1px 1px 3px 1.5px var(--white);
+    color: var(--grey);
+}
+
+.demo {
+    background-color: var(--pink);
+    color: var(--bright-white);
+}
+
+.show:hover {
+    box-shadow: 1px 1px 3px 2.5px #bcbcbc;
+}
+
+.demo:hover {
+    background-color: #d7007a;
+}
+
+
+/* Premium Templates and Services pt and s */
+.ptands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    padding: 21px 0px;
+    box-shadow: 0px 0px 3px var(--white), 0px 0px 5px var(--bright-white), 0px 0px 7px var(--grey);
+}
+
+.plancer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 11px 21px;
+}
+
+.plancer div:first-child {
+    margin: 11px 1px;
+}
+
+.plancer div h2 {
+    font-family: 'itim', cursive;
+    text-align: center;
+}
+
+.plancer div p {
+    font-size: 1.6vw;
+    text-align: center;
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+.plancer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0px 11px;
+}
+
+.plancer div a img {
+    width: 40vw;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.plancer div a span {
+    font-size: 1.10025rem;
+    padding: 16px 0px;
+    display: block;
+    font-family: 'itim', cursive;
+    transition: all 0.2s linear;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.plancer div a {
+    line-height: 11px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px var(--grey);
+}
+
+.plancer div a span:hover {
+    background-color: #d7007a;
+}
+
+/* 4K */
+@media screen and (min-width: 1850px){
+    .plancer div a span{
+        font-size: 1.5rem;
+    }
+    .sContent p{
+        font-size: 1.7rem;
+    }
+    .show, .demo{
+        font-size: 2rem;
+    }
+    .temdetail h4, .detail button{
+        font-size: 1.7rem;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 977px) {
+
+    .sContent,
+    .sContent p,
+    .detail button {
+        font-size: 1.1rem;
+    }
+
+    .plancer {
+        flex-wrap: wrap-reverse;
+    }
+
+    .plancer>div>a>img {
+        width: 50vw;
+    }
+
+    .showcase>div:last-child {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 529px) {
+    .showcase>div:first-child {
+        display: none;
+    }
+
+    .sContent p,
+    .temdetail h4,
+    .prefsecs ul li a {
+        font-size: 0.7rem;
+    }
+
+    .sContent>p:last-child {
+        display: block;
+    }
+
+    .plancer div p {
+        display: none;
+    }
+
+    .plancer {
+        flex-wrap: wrap;
+    }
+
+    .plancer div a span {
+        font-size: 0.7rem;
+        padding: 9px 0px;
+    }
+
+    .detail button,
+    .show,
+    .demo {
+        font-size: 0.9rem;
+    }
+
+    .templatepad,
+    .plancer {
+        padding: 11px;
+    }
+
+    .plancer>div>a>img {
+        width: 60vw;
+    }
+
+    .temdetail {
+        line-height: 1.5rem;
+    }
+
+    .show,
+    .demo {
+        padding: 5px;
+    }
+
+    .containers {
+        padding-bottom: 9px;
+    }
+
+    .fsecs:first-child {
+        height: 170px;
+    }
+
+    .prefsecs ul {
+        line-height: 1.1rem;
+    }
+
+    .plancer div a img {
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+    }
+
+    .plancer div a span {
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+}
